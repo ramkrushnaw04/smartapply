@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: black;
+}
+
+/* Add this to your CSS / Tailwind overrides */
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+}
+
+.slick-list {
+  overflow: visible !important; /* allow scaled card to pop out */
+
+}
+
+
+.navbar-links {
+    mix-blend-mode: difference; /* inverts text against background */
+  color: black; /* base color */
+}
+
+.scrollLeft {
+    animation: scrollLeft 40s linear infinite   ;
+}
+
+.scrollRight {
+    animation: scrollRight 40s linear infinite   ;
+}
+
+@keyframes scrollLeft {
+  
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
