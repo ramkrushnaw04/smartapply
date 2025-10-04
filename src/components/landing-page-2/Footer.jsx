@@ -24,7 +24,7 @@ export default function Footer() {
           className="flex-1 flex flex-col justify-between"
         >
           <div>
-            <div className="text-white font-extrabold text-2xl mb-8">.JobNest</div>
+            <div className="text-white font-extrabold text-2xl mb-8">SmartApply</div>
             <h3 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-white">
               Stay Connected <br />With JobNest
             </h3>
@@ -75,7 +75,7 @@ export default function Footer() {
         transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
         className="text-center text-gray-400 mt-12 text-base"
       >
-        Copyrights 2025 JobNest. All rights reserved.
+        Copyrights 2025 SmartApply. All rights reserved.
       </motion.div>
     </motion.footer>
   );

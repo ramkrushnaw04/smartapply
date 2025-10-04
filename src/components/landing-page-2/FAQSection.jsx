@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "How do I apply for a job on JobNest?",
+    question: "How do I apply for a job on SmartApply?",
     answer:
-      'To apply for a job on JobNest, simply sign up for a free account and complete your profile. Then, browse through curated job listings based on your skills and interests. When you find a job you like, click “Apply Now” to send your CV instantly. You’ll also get personalized job alerts sent directly to your dashboard.'
+      'To apply for a job on SmartApply, simply sign up for a free account and complete your profile. Then, browse through curated job listings based on your skills and interests. When you find a job you like, click “Apply Now” to send your CV instantly. You’ll also get personalized job alerts sent directly to your dashboard.'
   },
   {
-    question: "What is JobNest?",
-    answer: "JobNest is an online job search platform that connects job seekers with employers using smart matching technology, curated listings, and seamless application tools."
+    question: "What is SmartApply?",
+    answer: "SmartApply is an online job search platform that connects job seekers with employers using smart matching technology, curated listings, and seamless application tools."
   },
   {
     question: "How can I get better job matches?",
-    answer: "To get better job matches, keep your profile updated, specify your key skills and interests accurately, and make use of JobNest's filters and alerts for jobs that fit your background and goals."
+    answer: "To get better job matches, keep your profile updated, specify your key skills and interests accurately, and make use of SmartApply's filters and alerts for jobs that fit your background and goals."
   },
   {
-    question: "How often are new jobs posted on JobNest?",
-    answer: "New jobs are posted on JobNest daily as employers regularly update their hiring needs, ensuring a fresh list of opportunities for job seekers."
+    question: "How often are new jobs posted on SmartApply?",
+    answer: "New jobs are posted on SmartApply daily as employers regularly update their hiring needs, ensuring a fresh list of opportunities for job seekers."
   },
   {
     question: "Can I save job listings for later?",
-    answer: "Yes, JobNest allows you to save job listings to your dashboard so you can revisit and apply to your favorite opportunities whenever you like."
+    answer: "Yes, SmartApply allows you to save job listings to your dashboard so you can revisit and apply to your favorite opportunities whenever you like."
   }
 ];
 

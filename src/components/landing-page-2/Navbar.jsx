@@ -42,7 +42,7 @@ export const Navbar = () => {
             <div className={`w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between shadow-3xl ${isMobile ? "backdrop-blur-[7px] rounded-full " : "backdrop-blur-none "}`}>
                 {/* Logo */}
                 <div className="text-2xl font-bold text-indigo-500 px-3 drop-shadow cursor-pointer flex-shrink-0">
-                    SmartApp.ly
+                    SmartApply
                 </div>
 
                 {/* Desktop Menu */}
