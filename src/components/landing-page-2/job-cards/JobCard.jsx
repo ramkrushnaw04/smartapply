@@ -2,7 +2,7 @@ import React from "react";
 
 export default function JobCard() {
   return (
-    <div className="max-w-xs w-full bg-white rounded-3xl border-white p-5 shadow-md flex flex-col gap-3"
+    <div className="max-w-xs w-full  transition-all  bg-white rounded-3xl border-white p-5 shadow-md flex flex-col gap-3"
       style={{
         borderImage: 'linear-gradient(to top right, #a5b4fc, #d8b4fe, #fbcfe8) 1'
       }}>

@@ -6,7 +6,7 @@ export default function Hero() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex-1 flex flex-col items-center justify-center pt-36 px-4 "
+      className="flex-1 flex flex-col items-center justify-center pt-36 px-8 sm:px-4"
     >
       <motion.h1
         initial={{ opacity: 0, y: 10 }}

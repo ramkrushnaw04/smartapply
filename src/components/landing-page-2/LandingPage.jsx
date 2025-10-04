@@ -25,7 +25,7 @@ const LandingPage = () => {
             <TrustedStatsSection />
             <PopularJobsSection />
             <TestimonialSection />
-            {/* <HeroOpportunitiesSection /> */}
+            <HeroOpportunitiesSection />
             <FAQSection />
             <ContactSection />
             <Footer />

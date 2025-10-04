@@ -116,11 +116,11 @@ const careers = [
 ];
 
 
-function InfiniteScroller({ jobs, direction = "r-to-"}) {
+function InfiniteScroller({ jobs, direction = "r-to-l"}) {
 
     return (
         <div className="wrapper overflow-scroll  flex flex-row">
-            <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex  py-6 justify-center items-center gap-6 px-3`}>
+            <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex py-2 sm:py-6  justify-center items-center gap-6 px-3`}>
                 {jobs.map(
                     ({ title, jobs, icon: Icon, bgGradient, borderColor, colStart, colSpan }, idx) => (
                         <div
@@ -146,7 +146,7 @@ function InfiniteScroller({ jobs, direction = "r-to-"}) {
                 )}
             </div>
 
-            <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex  py-6 justify-center items-center gap-6 px-3`}>
+            <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex  py-2 sm:py-6 justify-center items-center gap-6 px-3`}>
                 {jobs.map(
                     ({ title, jobs, icon: Icon, bgGradient, borderColor, colStart, colSpan }, idx) => (
                         <div
@@ -178,7 +178,7 @@ function InfiniteScroller({ jobs, direction = "r-to-"}) {
 
 export default function CareerExploreSection() {
     return (
-        <section className="relative py-16 px-8 sm:px-16 bg-white max-w-screen-xl mx-auto overflow-hidden">
+        <section className="relative py-10 sm:py-16 px-8 sm:px-16 bg-white max-w-screen-xl mx-auto overflow-hidden">
             <div className="pointer-events-none absolute bottom-0 left-0 w-1/2 h-80 blur-3xl bg-gradient-to-tr from-purple-100 via-pink-100 to-yellow-100 opacity-20 rounded-3xl -z-10"></div>
 
             <h2 className="text-center font-extrabold text-3xl sm:text-4xl mb-3 max-w-3xl mx-auto leading-tight">
@@ -188,20 +188,19 @@ export default function CareerExploreSection() {
                 Discover a wide range of careers across every industry — from design and tech to healthcare and finance. Find roles that match your skills and passion.
             </p>
 
-            <div className="relative w-full overflow-hidden">
+            <div className="relative w-full overflow-hidden ">
 
-                <InfiniteScroller direction="r-to-l" jobs={careers.slice(0, 3)} />
+                <InfiniteScroller direction="l-to-r" jobs={careers.slice(0, 3)} />
                 <InfiniteScroller direction="l-to-r" jobs={careers.slice(4, 9)} />
-                <InfiniteScroller direction="r-to-l" jobs={careers.slice(8, 11)} />
-
+                <InfiniteScroller direction="l-to-r" jobs={careers.slice(8, 11)} />
 
                 {/* element to add a transition  */}
-                <div className="w-20 h-full absolute top-0 left-0 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
-                <div className="w-20 h-full absolute top-0 right-0 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+                <div className="w-5 sm:w-20 h-full absolute top-0 left-0 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+                <div className="w-5 sm:w-20 h-full absolute top-0 right-0 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
             </div>
 
 
-            <button className="mt-20 block mx-auto bg-gradient-to-r from-indigo-300 to-pink-300 text-white py-3 px-12 rounded-full text-lg font-semibold shadow-lg hover:opacity-70 transition">
+            <button className="mt-10 sm:mt-20 block mx-auto bg-gradient-to-r from-indigo-300 to-pink-300 text-white py-3 px-12 rounded-full text-lg font-semibold shadow-lg hover:opacity-70 transition">
                 Explore All
             </button>
         </section>

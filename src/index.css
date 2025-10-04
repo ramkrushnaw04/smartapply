@@ -51,3 +51,11 @@ body {
     transform: translateX(-100%);
   }
 }
+
+.wrapper {
+overflow: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}

@@ -29,7 +29,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="max-w-4xl mx-auto py-20 px-4">
+    <section className="max-w-4xl mx-auto py-20 px-10 sm:px-4">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function FAQSection() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="mt-2 ml-6 text-gray-600 text-sm max-w-2xl"
+                  className="mt-2 sm:ml-6 text-gray-600 text-sm max-w-2xl"
                 >
                   {faq.answer}
                 </motion.p>

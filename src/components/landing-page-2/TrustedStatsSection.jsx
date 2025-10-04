@@ -31,7 +31,7 @@ export default function TrustedEcosystemSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="relative mx-auto max-w-5xl rounded-2xl py-16 px-6 sm:px-12 my-10 shadow-2xl"
+      className="relative mx-2 max-w-5xl sm:mx-auto rounded-2xl py-16 px-6 sm:px-12 my-10 shadow-2xl"
       style={{
         background:
           "radial-gradient(ellipse 80% 60% at 20% 30%, rgba(190,136,255,0.15), transparent 90%), radial-gradient(ellipse 75% 55% at 80% 30%, rgba(89,52,187,0.15), transparent 90%), #18181b",
@@ -42,7 +42,7 @@ export default function TrustedEcosystemSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ delay: 0.12, duration: 0.65, ease: "easeOut" }}
-        className="text-white text-center font-medium text-3xl sm:text-4xl md:text-5xl leading-tight mb-10 max-w-4xl mx-auto"
+        className="text-white  text-center font-medium text-3xl sm:text-4xl md:text-5xl leading-tight mb-10 max-w-4xl mx-auto"
       >
         We’ve Built A Trusted Ecosystem That Supports{" "}
         <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-orange-300 bg-clip-text text-transparent">
@@ -53,7 +53,7 @@ export default function TrustedEcosystemSection() {
         </span>{" "}
         Around The Globe — Fast, Reliable, And Results-Driven.
       </motion.h2>
-      <div className="flex flex-wrap justify-center gap-y-10 md:gap-y-0 md:gap-x-10 mb-12 mt-40">
+      <div className="flex flex-wrap justify-center gap-y-10 md:gap-y-0 md:gap-x-10 mb-12 sm:mt-40">
         {metrics.map((metric, i) => (
           <motion.div
             key={metric.value}

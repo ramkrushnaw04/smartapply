@@ -44,7 +44,7 @@ function ProjectCard() {
 export default function HeroOpportunitiesSection() {
   return (
     <section
-      className="w-full min-h-[550px] flex items-center justify-center px-3 py-24"
+      className="w-full min-h-[550px] flex items-center justify-center px-3 py-12 sm:py-24"
       style={{
         background:
           "radial-gradient(ellipse 80% 65% at 20% 30%, rgba(190,136,255,0.09), transparent 90%), radial-gradient(ellipse 75% 55% at 80% 30%, rgba(89,52,187,0.18), transparent 90%), #18181b",
@@ -74,9 +74,8 @@ export default function HeroOpportunitiesSection() {
           </motion.div>
 
           {/* Project Card */}
-          <div className="absolute top-[240px] z-10 left-40 shadow-md"> 
-            
-          <ProjectCard />
+          <div className="absolute top-[400px] left-10 sm:top-[240px] sm:left-40 z-10 shadow-xl"> 
+            <ProjectCard />
           </div>
         </div>
 
@@ -86,7 +85,7 @@ export default function HeroOpportunitiesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex-1 max-w-xl md:ml-48"
+          className="flex-1 max-w-xl md:ml-48 mt-10 sm:mt-0 px-4"
         >
           <motion.h1
             initial={{ opacity: 0, y: 14 }}
