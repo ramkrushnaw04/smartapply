@@ -11,7 +11,10 @@ const users = [
 
 export default function TestimonialSection() {
   return (
-    <section className="w-full pb-20 sm:py-36 relative overflow-hidden bg-white">
+    <section 
+        className="content w-full pb-20 sm:py-36 relative overflow-hidden bg-white"
+        data-bg = 'light'
+    >
       {/* Decorative background */}
       <div
         className="absolute right-0 top-0 w-[60vw] h-[80vh] pointer-events-none opacity-80"

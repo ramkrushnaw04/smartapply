@@ -119,7 +119,9 @@ const careers = [
 function InfiniteScroller({ jobs, direction = "r-to-l"}) {
 
     return (
-        <div className="wrapper overflow-scroll  flex flex-row">
+        <div 
+            className=" wrapper overflow-scroll  flex flex-row"
+        >
             <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex py-2 sm:py-6  justify-center items-center gap-6 px-3`}>
                 {jobs.map(
                     ({ title, jobs, icon: Icon, bgGradient, borderColor, colStart, colSpan }, idx) => (
@@ -178,7 +180,10 @@ function InfiniteScroller({ jobs, direction = "r-to-l"}) {
 
 export default function CareerExploreSection() {
     return (
-        <section className="relative py-10 sm:py-16 px-8 sm:px-16 bg-white max-w-screen-xl mx-auto overflow-hidden">
+        <section 
+            className="content relative py-10 sm:py-16 px-8 sm:px-16  max-w-screen-xl mx-auto overflow-hidden" 
+            data-bg = 'light'
+        >
             <div className="pointer-events-none absolute bottom-0 left-0 w-1/2 h-80 blur-3xl bg-gradient-to-tr from-purple-100 via-pink-100 to-yellow-100 opacity-20 rounded-3xl -z-10"></div>
 
             <h2 className="text-center font-extrabold text-3xl sm:text-4xl mb-3 max-w-3xl mx-auto leading-tight">
@@ -188,7 +193,9 @@ export default function CareerExploreSection() {
                 Discover a wide range of careers across every industry — from design and tech to healthcare and finance. Find roles that match your skills and passion.
             </p>
 
-            <div className="relative w-full overflow-hidden ">
+            <div 
+                className=" relative w-full overflow-hidden "
+            >
 
                 <InfiniteScroller direction="l-to-r" jobs={careers.slice(0, 3)} />
                 <InfiniteScroller direction="l-to-r" jobs={careers.slice(4, 9)} />

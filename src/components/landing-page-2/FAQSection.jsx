@@ -29,7 +29,10 @@ export default function FAQSection() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="max-w-4xl mx-auto py-20 px-10 sm:px-4">
+    <section 
+        className="content max-w-4xl mx-auto py-20 px-10 sm:px-4"
+        data-bg = 'light'
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

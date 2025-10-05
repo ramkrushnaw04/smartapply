@@ -44,11 +44,12 @@ function ProjectCard() {
 export default function HeroOpportunitiesSection() {
   return (
     <section
-      className="w-full min-h-[550px] flex items-center justify-center px-3 py-12 sm:py-24"
+      className="content w-full min-h-[550px] flex items-center justify-center px-3 py-12 sm:py-24"
       style={{
         background:
           "radial-gradient(ellipse 80% 65% at 20% 30%, rgba(190,136,255,0.09), transparent 90%), radial-gradient(ellipse 75% 55% at 80% 30%, rgba(89,52,187,0.18), transparent 90%), #18181b",
       }}
+      data-bg = 'dark'
     >
       <div className="max-w-6xl w-full flex flex-col md:flex-row items-center gap-10">
         {/* Cards - left */}

@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 export default function ContactSection() {
   return (
-    <section className="w-full flex justify-center items-center py-20 px-2">
+    <section 
+        className="content w-full flex justify-center items-center py-20 px-2"
+        data-bg = 'dark'
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

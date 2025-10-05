@@ -6,13 +6,14 @@ export default function Hero() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex-1 flex flex-col items-center justify-center pt-36 px-8 sm:px-4"
+      className="content flex-1 flex flex-col items-center justify-center pt-36 px-8 sm:px-4"
+      data-bg = 'light'
     >
       <motion.h1
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-bold text-center mb-4"
+        className=" text-4xl md:text-5xl font-bold text-center mb-4"
       >
         Your Next Job Is <br />
         Just{" "}
@@ -31,7 +32,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-        className="text-gray-600 text-center mb-8 max-w-xl"
+        className=" text-gray-600 text-center mb-8 max-w-xl"
       >
         Find opportunities that match your passion, not just your resume.
         <br />

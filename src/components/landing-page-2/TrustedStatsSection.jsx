@@ -31,11 +31,12 @@ export default function TrustedEcosystemSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="relative mx-2 max-w-5xl sm:mx-auto rounded-2xl py-16 px-6 sm:px-12 my-10 shadow-2xl"
+      className=" content relative mx-2 max-w-5xl sm:mx-auto rounded-2xl py-16 px-6 sm:px-12 my-10 shadow-2xl"
       style={{
         background:
           "radial-gradient(ellipse 80% 60% at 20% 30%, rgba(190,136,255,0.15), transparent 90%), radial-gradient(ellipse 75% 55% at 80% 30%, rgba(89,52,187,0.15), transparent 90%), #18181b",
       }}
+      data-bg = 'dark'
     >
       <motion.h2
         initial={{ opacity: 0, y: 18 }}

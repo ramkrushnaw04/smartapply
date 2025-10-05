@@ -72,7 +72,10 @@ export function CardCarousel() {
 
 
     return (
-        <div className="p-10 scale-90 sm:scale-100 relative overflow-hidden bg-white pt-[80px] h-[450px] max-w-[1000px] mx-auto ">
+        <section 
+            className="content p-10 scale-90 sm:scale-100 relative overflow-hidden bg-white pt-[80px] h-[450px] max-w-[1000px] mx-auto "
+            data-bg = 'light'
+        >
             <Slider {...settings}>
                 {cards.map((Card, index) => (
                     <ScrollingCard rotation={getRotation(index)} isInFocus={activeIndex === index} key={index}>
@@ -87,7 +90,7 @@ export function CardCarousel() {
             <div className="w-10 sm:w-20 h-full absolute top-0 right-0 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
 
 
-        </div>
+        </section>
     );
 }
 export default CardCarousel;

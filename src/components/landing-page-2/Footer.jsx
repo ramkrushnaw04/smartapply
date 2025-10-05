@@ -8,11 +8,12 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="w-full px-4 py-16 md:py-20 mt-12"
+      className="content w-full px-4 py-16 md:py-20 mt-12"
       style={{
         background:
           "radial-gradient(ellipse 80% 60% at 20% 30%, rgba(190,136,255,0.07), transparent 95%), radial-gradient(ellipse 75% 55% at 80% 30%, rgba(89,52,187,0.09), transparent 99%), #18181b",
       }}
+      data-bg = 'dark'
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
         {/* Brand & Social */}

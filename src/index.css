@@ -19,11 +19,6 @@ body {
 }
 
 
-.navbar-links {
-    mix-blend-mode: difference; /* inverts text against background */
-  color: black; /* base color */
-}
-
 .scrollLeft {
     animation: scrollLeft 40s linear infinite   ;
 }
