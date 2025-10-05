@@ -12,7 +12,6 @@ import {
     MdFolder,
 } from "react-icons/md";
 
-// Use less saturated gradients and lighter borders for duller color
 const careers = [
     {
         title: "Marketing & Communication",
@@ -113,16 +112,23 @@ const careers = [
         colStart: 10,
         colSpan: 3,
     },
+    {
+        title: "Marketing & Communication",
+        jobs: 68,
+        icon: MdCampaign,
+        bgGradient: "bg-gradient-to-br from-blue-100 to-blue-300",
+        borderColor: "border-blue-300",
+        colStart: 10,
+        colSpan: 3,
+    },
 ];
 
 
-function InfiniteScroller({ jobs, direction = "r-to-l"}) {
+function InfiniteScroller({ jobs, scrollClass}) {
 
     return (
-        <div 
-            className=" wrapper overflow-scroll  flex flex-row"
-        >
-            <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex py-2 sm:py-6  justify-center items-center gap-6 px-3`}>
+        <div className=" wrapper overflow-scroll  flex flex-row" >
+            <div className={`${scrollClass} group  flex py-2 sm:py-6  justify-center items-center gap-6 px-3`}>
                 {jobs.map(
                     ({ title, jobs, icon: Icon, bgGradient, borderColor, colStart, colSpan }, idx) => (
                         <div
@@ -148,7 +154,33 @@ function InfiniteScroller({ jobs, direction = "r-to-l"}) {
                 )}
             </div>
 
-            <div className={`${direction === 'r-to-l' ? "scrollLeft" : "scrollRight "} group  flex  py-2 sm:py-6 justify-center items-center gap-6 px-3`}>
+            <div className={`${scrollClass} group  flex  py-2 sm:py-6 justify-center items-center gap-6 px-3`}>
+                {jobs.map(
+                    ({ title, jobs, icon: Icon, bgGradient, borderColor, colStart, colSpan }, idx) => (
+                        <div
+                            key={idx}
+                            className={`${borderColor} border rounded-xl p-4 flex items-center gap-4 cursor-pointer transition-shadow hover:shadow`}
+                            style={{
+                                gridColumnStart: colStart,
+                                gridColumnEnd: `span ${colSpan}`,
+                                minWidth: "250px",
+                                maxWidth: "250px",
+                                height: "92px"
+                            }}
+                        >
+                            <div className={`${bgGradient} p-3 rounded-full flex items-center justify-center`}>
+                                <Icon className="text-gray-200" size={22} />
+                            </div>
+                            <div className="flex flex-col justify-center h-full">
+                                <h3 className="font-semibold text-xs text-gray-700 truncate w-[160px]">{title}</h3>
+                                <p className="text-gray-400 text-xs mt-1">{jobs} Jobs Available</p>
+                            </div>
+                        </div>
+                    )
+                )}
+            </div>
+
+            <div className={`${scrollClass} group  flex  py-2 sm:py-6 justify-center items-center gap-6 px-3`}>
                 {jobs.map(
                     ({ title, jobs, icon: Icon, bgGradient, borderColor, colStart, colSpan }, idx) => (
                         <div
@@ -197,9 +229,9 @@ export default function CareerExploreSection() {
                 className=" relative w-full overflow-hidden "
             >
 
-                <InfiniteScroller direction="l-to-r" jobs={careers.slice(0, 3)} />
-                <InfiniteScroller direction="l-to-r" jobs={careers.slice(4, 9)} />
-                <InfiniteScroller direction="l-to-r" jobs={careers.slice(8, 11)} />
+                <InfiniteScroller scrollClass={'scroll1'} jobs={careers.slice(0, 4)} />
+                <InfiniteScroller scrollClass={'scroll2'}  jobs={careers.slice(4, 8)} />
+                <InfiniteScroller scrollClass={'scroll3'}  jobs={careers.slice(8, 12)} />
 
                 {/* element to add a transition  */}
                 <div className="w-5 sm:w-20 h-full absolute top-0 left-0 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>

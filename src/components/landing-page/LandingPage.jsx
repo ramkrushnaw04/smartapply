@@ -9,9 +9,7 @@ import ContactSection from "./ContactSection";
 import Footer from "./Footer";
 import TestimonialSection from "./TestimonialSection";
 import HeroOpportunitiesSection from "./HeroOpportunitiesSection";
-import { BubbleBackground } from "@/components/ui/shadcn-io/bubble-background";
-import BlurredCircle from "../ui/BlurredCircle";
-import BackgroundGradientWrapper from "../landing-page-2/ui/BackgroundGradientWrapper";
+
 
 
 const LandingPage = () => {

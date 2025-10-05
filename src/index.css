@@ -14,38 +14,31 @@ body {
 }
 
 .slick-list {
-  overflow: visible !important; /* allow scaled card to pop out */
+  overflow: visible !important; 
 
 }
 
-
-.scrollLeft {
-    animation: scrollLeft 40s linear infinite   ;
+.scroll1 {
+  animation: scrollLeft 10s linear infinite;
+  animation-delay: -4s; 
 }
 
-.scrollRight {
-    animation: scrollRight 40s linear infinite   ;
+.scroll2 {
+  animation: scrollLeft 10s linear infinite;
+  animation-delay: -2s; 
+}
+
+.scroll3 {
+  animation: scrollLeft 10s linear infinite;
+  animation-delay: 0s;
 }
 
 @keyframes scrollLeft {
-  
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
 
 
-@keyframes scrollRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
 .wrapper {
 overflow: hidden;

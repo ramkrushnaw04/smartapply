@@ -7,9 +7,7 @@ import { ResumeProvider } from './hooks/useResumes';
 import { JobOpportunitiesProvider } from './hooks/useJobOpportunities';
 import { AppliedJobsProvider } from './hooks/useAppliedJobs';
 import { AssignmentsProvider } from './hooks/useAssignments';
-import SmartApplyLanding from './components/SmartApplyLanding';
-import DepthEffectHero from './components/landing-page/Hero2';
-import LandingPage from './components/landing-page-2/LandingPage';
+import LandingPage from './components/landing-page/LandingPage';
 
 
 
@@ -24,7 +22,6 @@ function AppRoutes() {
 
     return (
         <Routes>
-            
             <Route
                 path="*"
                 element={<LandingPage/>}
