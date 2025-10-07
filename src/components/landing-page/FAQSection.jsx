@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
     question: "How do I apply for a job on SmartApply?",
     answer:
-      'To apply for a job on SmartApply, simply sign up for a free account and complete your profile. Then, browse through curated job listings based on your skills and interests. When you find a job you like, click “Apply Now” to send your CV instantly. You’ll also get personalized job alerts sent directly to your dashboard.'
+      'To apply for a job on SmartApply, simply sign up for a free account and complete your profile. Then, browse through curated job listings based on your skills and interests. When you find a job you like, click "Apply Now" to send your CV instantly.'
   },
   {
     question: "What is SmartApply?",
@@ -30,56 +30,82 @@ export default function FAQSection() {
 
   return (
     <section 
-        className="content max-w-4xl mx-auto py-20 px-10 sm:px-4"
-        data-bg = 'light'
+      className="content max-w-3xl mx-auto py-20 px-6 sm:px-4"
+      data-bg='light'
     >
-      <motion.h2
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center font-extrabold text-3xl sm:text-4xl mb-10 leading-tight"
+        className="text-center mb-14"
       >
-        Frequently<br />Asked Questions
-      </motion.h2>
+        <h2 className="font-extrabold text-4xl sm:text-5xl mb-3 bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-gray-600 text-base">
+          Everything you need to know about SmartApply
+        </p>
+      </motion.div>
 
-      <div className="space-y-10">
+      <div className="space-y-4">
         {faqs.map((faq, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
-            transition={{ delay: i * 0.12, duration: 0.5, ease: "easeOut" }}
-            className="flex items-start justify-between gap-8"
+            transition={{ delay: i * 0.08, duration: 0.5, ease: "easeOut" }}
+            className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:shadow-md hover:border-gray-300 transition-all duration-300 ease-out"
           >
-            <div className="w-full">
-              <button
-                className="w-full text-left font-semibold text-lg text-gray-900 focus:outline-none"
-                onClick={() => setOpen(open === i ? -1 : i)}
-                aria-expanded={open === i}
-              >
-                {faq.question}
-              </button>
-              {open === i && faq.answer && (
-                <motion.p
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="mt-2 sm:ml-6 text-gray-600 text-sm max-w-2xl"
-                >
-                  {faq.answer}
-                </motion.p>
-              )}
-            </div>
-
             <button
-              className="text-purple-400 text-3xl font-light select-none"
+              className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none group"
               onClick={() => setOpen(open === i ? -1 : i)}
-              aria-label="Toggle FAQ"
+              aria-expanded={open === i}
+              aria-controls={`faq-answer-${i}`}
             >
-              {open === i && faq.answer ? "−" : "+"}
+              <span className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                {faq.question}
+              </span>
+              
+              <motion.div
+                animate={{ rotate: open === i ? 45 : 0 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 text-gray-600"
+              >
+                <span className="text-2xl font-light leading-none">+</span>
+              </motion.div>
             </button>
+
+            <AnimatePresence initial={false}>
+              {open === i && faq.answer && (
+                <motion.div
+                  id={`faq-answer-${i}`}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ 
+                    height: "auto", 
+                    opacity: 1,
+                    transition: {
+                      height: { duration: 0.4, ease: "easeOut" },
+                      opacity: { duration: 0.3, delay: 0.1 }
+                    }
+                  }}
+                  exit={{ 
+                    height: 0, 
+                    opacity: 0,
+                    transition: {
+                      height: { duration: 0.3, ease: "easeIn" },
+                      opacity: { duration: 0.2 }
+                    }
+                  }}
+                  className="overflow-hidden"
+                >
+                  <p className="px-6 pb-6 text-gray-700 text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         ))}
       </div>

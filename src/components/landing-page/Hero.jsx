@@ -32,10 +32,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-        className=" text-gray-600 text-center mb-8 max-w-xl"
+        className=" text-gray-600 text-center mb-8 max-w-xl mt-3"
       >
         Find opportunities that match your passion, not just your resume.
-        <br />
         Let’s build the career you deserve — starting today.
       </motion.p>
 
@@ -44,15 +43,15 @@ export default function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-        className="flex items-center bg-white rounded-full shadow-md px-6 py-3 w-full max-w-2xl mb-10"
+        className="flex flex-col sm:flex-row items-center bg-white rounded-3xl sm:rounded-full shadow-md p-3 sm:px-6 sm:py-3 w-full max-w-2xl mb-10"
       >
         <input
           type="text"
           placeholder="Job Title or Keyword"
-          className="flex-1 bg-transparent outline-none text-gray-700"
+          className="flex-1 p-3 bg-transparent outline-none text-gray-700 w-full sm:w-auto"
         />
 
-        <button className="ml-4 bg-gradient-to-r from-indigo-400 to-pink-400 text-white font-semibold px-6 py-2 rounded-full shadow transition hover:opacity-90">
+        <button className="sm:ml-4 w-full sm:w-auto bg-gradient-to-r from-indigo-400 to-pink-400 text-white font-semibold py-3 sm:px-6 sm:py-2 rounded-full shadow transition hover:opacity-90">
           Search
         </button>
       </motion.div>

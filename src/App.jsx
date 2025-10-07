@@ -7,10 +7,7 @@ import { ResumeProvider } from './hooks/useResumes';
 import { JobOpportunitiesProvider } from './hooks/useJobOpportunities';
 import { AppliedJobsProvider } from './hooks/useAppliedJobs';
 import { AssignmentsProvider } from './hooks/useAssignments';
-import LandingPage from './components/landing-page/LandingPage';
-
-
-
+import LandingPage from './pages/LandingPage';
 
 
 function AppRoutes() {
@@ -23,8 +20,20 @@ function AppRoutes() {
     return (
         <Routes>
             <Route
-                path="*"
-                element={<LandingPage/>}
+                path="/landing"
+                element={<LandingPage />}
+            />
+            <Route
+                path="/login"
+                element={user ? <Navigate to="/dashboard" /> : <LoginPage />}
+            />
+            <Route
+                path="/dashboard/*"
+                element={user ? <Dashboard /> : <Navigate to="/login" />}
+            />
+            <Route
+                path="/"
+                element={<Navigate to={user ? "/dashboard" : "/login"} />}
             />
         </Routes>
     );

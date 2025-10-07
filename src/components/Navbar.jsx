@@ -28,7 +28,7 @@ export const Navbar = () => {
           
           {/* Desktop Menu */}
           <div className="flex items-center space-x-8">
-            <a href="#jobs" className={` text-gray-900 hover:text-blue-600   font-bold`}>
+            <a href="#" className={` text-gray-900 hover:text-blue-600   font-bold`}>
               How it works
             </a>
             <a href="#" className={` text-gray-900 hover:text-blue-600  font-bold`}>
