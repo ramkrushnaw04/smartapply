@@ -15,7 +15,6 @@ import HeroOpportunitiesSection from "@/components/landing-page/HeroOpportunitie
 const LandingPage = () => {
     return (
         <div className="min-h-screen bg-white">
-            
             <Navbar />
             <Hero />
             <CardCarousel />
@@ -27,8 +26,6 @@ const LandingPage = () => {
             <FAQSection />
             <ContactSection />
             <Footer />
-
-
         </div>
     );
 };

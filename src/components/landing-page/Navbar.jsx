@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 import { useSectionTextColor } from "@/hooks/useSectionTextColor";
 
 export const Navbar = () => {
@@ -9,6 +9,7 @@ export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const textColor = useSectionTextColor();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -141,18 +142,24 @@ export const Navbar = () => {
 
                         {/* Desktop Menu */}
                         <div className={`flex items-center space-x-6 font-bold ${textColor}`}>
-                            <a href="#" className="hover:text-indigo-500 font-semibold transition-colors duration-200 whitespace-nowrap">Jobs</a>
-                            <a href="#" className="hover:text-indigo-500 font-semibold transition-colors duration-200 whitespace-nowrap">Companies</a>
-                            <a href="#" className="hover:text-indigo-500 font-semibold transition-colors duration-200 whitespace-nowrap">Career Resources</a>
-                            <a href="#" className="hover:text-indigo-500 font-semibold transition-colors duration-200 whitespace-nowrap">For Employers</a>
+                            <a href="#" className="hover:text-pink-400 font-semibold transition-colors duration-200 whitespace-nowrap">Jobs</a>
+                            <a href="#" className="hover:text-pink-400 font-semibold transition-colors duration-200 whitespace-nowrap">Companies</a>
+                            <a href="#" className="hover:text-pink-400 font-semibold transition-colors duration-200 whitespace-nowrap">Career Resources</a>
+                            <a href="#" className="hover:text-pink-400 font-semibold transition-colors duration-200 whitespace-nowrap">For Employers</a>
                         </div>
 
                         {/* Desktop Login/Signup */}
                         <div className="flex items-center gap-3 ml-4 flex-shrink-0">
-                            <button className="px-4 py-2 rounded-full font-semibold bg-white text-black border border-gray-300 hover:bg-gray-100 transition-all duration-200 whitespace-nowrap">
+                            <button 
+                                className="px-4 py-2 rounded-full font-semibold bg-white text-black border border-gray-300 hover:bg-gray-100 transition-all duration-200 whitespace-nowrap"
+                                onClick={() => navigate('/login')}
+                            >
                                 Log In
                             </button>
-                            <button className="px-6 py-2 rounded-full font-semibold bg-black text-white shadow hover:bg-gray-800 transition-all duration-200 whitespace-nowrap">
+                            <button 
+                                className="px-6 py-2 rounded-full font-semibold bg-black text-white shadow hover:bg-gray-800 transition-all duration-200 whitespace-nowrap"
+                                onClick={() => navigate('/login')}
+                            >
                                 Sign Up
                             </button>
                         </div>

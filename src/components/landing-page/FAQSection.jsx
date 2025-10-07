@@ -64,7 +64,7 @@ export default function FAQSection() {
               aria-expanded={open === i}
               aria-controls={`faq-answer-${i}`}
             >
-              <span className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+              <span className="font-semibold text-lg text-gray-900 group-hover:text-pink-400 transition-colors duration-200">
                 {faq.question}
               </span>
               
